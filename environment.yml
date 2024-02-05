@@ -1,0 +1,9 @@
+name: mfa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scikit-learn
+  - pandas
+  - tqdm
+  - tensorboard

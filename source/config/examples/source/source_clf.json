@@ -1,0 +1,43 @@
+{
+    "generic_params": {
+        "gpu": 0,
+        "results_path": "/path/to/results/source",
+        "log": ["tensorboard", "disk"],
+        "seed": [1],
+        "datasets": "/path/to/splits.csv",
+        "labels": "/path/to/labels.csv",
+        "metrics": ["f1"],
+        "base_path": "/path/to/data/"
+    },
+    "data_params": {
+        "not_balanced": false,
+        "norm_stats": "imagenet",
+        "src_dom": [["kather19"]],
+        "tar_dom": [[]]
+    },
+    "training_params": {
+        "nepochs": 200,
+        "source_model": "none",
+        "gan_path": "none",
+        "gan_ckpt_n_iter": 0,
+        "reduce": [0],
+        "batch_size": [64],
+        "lr": [1e-4],
+        "lr_patience": [30],
+        "optimizer": ["radam"],
+        "warmup_nepochs": [0],
+        "warmup_lr_factor": [0.5],
+        "weight_decay": [1e-3],
+        "backbone": ["resnet18"],
+        "unfreeze_layer": [10]
+    },
+    "model_params": {
+        "model": ["sources"],
+        "gan_batchsize": [16],
+        "lamb": [0],
+        "delt": [0],
+        "stage": 5,
+        "disc_lr": [0.0],
+        "gen_lr": [0.0]
+    }
+}

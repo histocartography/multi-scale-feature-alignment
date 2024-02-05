@@ -1,0 +1,47 @@
+{
+    "generic_params": {
+        "gpu": 0,
+        "results_path": "/path/to/results/k16_gen",
+        "log": ["tensorboard", "disk"],
+        "seed": [1],
+        "datasets": "/path/to/splits.csv",
+        "labels": "/path/to/labels.csv",
+        "metrics": ["f1"],
+        "base_path": "/path/to/data/"
+    },
+    "data_params": {
+        "not_balanced": false,
+        "norm_stats": "imagenet",
+        "src_dom": [["kather19"]],
+        "tar_dom": [["kather16", "crctp"]]
+    },
+    "training_params": {
+        "nepochs": 100,
+        "source_model": "/path/to/results/k16_clf/pretrained_models/ours_adda_gen/kather19_kather16.pt",
+        "gan_path": "/path/to/results/source_gen/generative",
+        "gan_ckpt_n_iter": 250,
+        "reduce": [0],
+        "batch_size": [16],
+        "lr": [0.001],
+        "lr_patience": [50],
+        "optimizer": ["radam"],
+        "warmup_nepochs": [0],
+        "warmup_lr_factor": [0.5],
+        "weight_decay": [0.0005],
+        "backbone": ["resnet18"],
+        "unfreeze_layer": [10]
+    },
+    "model_params": {
+        "model": ["generative"],
+        "lamb": [0.0],
+        "delt": [1.5],
+        "stage": 5,
+        "disc_lr": [0],
+        "gen_lr": [0],
+        "gan_batchsize": [16],
+        "gan_epochs": [200],
+        "gan_disc_lr": [0.0002],
+        "gan_gen_lr": [0.0003],
+        "r1_gamma": [10.0]
+    }
+}
