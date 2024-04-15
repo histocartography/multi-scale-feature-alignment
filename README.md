@@ -133,10 +133,10 @@ python bin/trainer_config.py --json-file ./source/config/examples/step_2/crctp_k
 If you use this code, please make sure to cite our work:
 
 ```
-@article{thandiackal2023mfa,
+@article{thandiackal2024mfa,
     title = {Multi-scale Feature Alignment for Continual Learning of Unlabeled Domains},
-    journal = {arXiv:2302.01287},
-    year = {2023},
+    journal = {IEEE Transactions on Medical Imaging},
+    year = {2024},
     author = {Kevin Thandiackal and Luigi Piccinelli and Rajarsi Gupta and Pushpak Pati and Orcun Goksel},
 }
 ```
